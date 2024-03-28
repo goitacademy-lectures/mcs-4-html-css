@@ -2,7 +2,7 @@
 
 HTML-CSS course for Master of Science in Computer Science
 
-## План заняття (26.03.2024):
+## План заняття (28.03.2024):
 
 - HTML, CSS, JS - основні веб-технологої
 - Теги та атрибути
