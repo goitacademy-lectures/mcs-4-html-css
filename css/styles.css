@@ -1,0 +1,41 @@
+/* Base styles */
+body {
+  color: #111111;
+}
+a {
+  color: currentColor;
+}
+
+/* #region Common styles */
+/* Logo */
+.logo {
+}
+.logo-img {
+}
+/* Socials */
+.socials {
+}
+.socials-item {
+}
+.socials-link {
+}
+.socials-icon {
+}
+/* #endregion */
+
+/* #region Header */
+.header {
+}
+.header-logo {
+}
+.header-menu {
+}
+.header-menu-list {
+}
+.header-menu-item {
+}
+.header-menu-link {
+}
+.header-list {
+}
+/* #endregion */
