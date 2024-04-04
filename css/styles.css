@@ -1,14 +1,70 @@
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('../fonts/Roboto-Regular.ttf') format('truetype');
+}
+
+:root {
+  /* Fonts */
+  --primary-font: 'Montserrat', sans-serif;
+  /* Colors */
+  --primary-cl: 17, 17, 17;
+  --secondary-cl: ;
+  --accent-cl: 253, 146, 34;
+  --light-cl: 255, 255, 255;
+  --dark-cl: 0, 0, 0;
+  /* Others */
+}
+
 /* Base styles */
 body {
-  color: #111111;
+  font-family: var(--primary-font);
+  font-size: 14px;
+  line-height: 1.29;
+  letter-spacing: -0.02em;
+  color: rgba(var(--primary-cl), 1);
 }
 a {
   color: currentColor;
+  text-decoration: none;
+}
+ul,
+ol {
+  list-style-type: none;
+}
+button {
+  font-family: inherit;
+  color: currentColor;
+  cursor: pointer;
+}
+address {
+  font-style: normal;
 }
 
 /* #region Common styles */
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  overflow: hidden;
+}
 /* Logo */
 .logo {
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 1.11;
+  letter-spacing: -0.03em;
+}
+.logo-accent {
+  font-style: italic;
 }
 .logo-img {
 }
@@ -20,6 +76,41 @@ a {
 .socials-link {
 }
 .socials-icon {
+}
+.main-title {
+  font-size: 28px;
+  font-weight: 500;
+  line-height: 1.21;
+  letter-spacing: -0.03em;
+  color: rgba(var(--light-cl), 1);
+}
+.btn {
+  font-weight: 600;
+  color: rgba(var(--light-cl), 1);
+  background: transparent;
+}
+.btn-accent {
+  background: rgba(var(--accent-cl), 1);
+}
+.btn-accent:hover,
+.btn-accent:focus {
+  color: rgba(var(--accent-cl), 1);
+  background: #fcf1e0;
+}
+.btn-light {
+}
+.btn-light:hover,
+.btn-light:focus {
+  color: rgba(var(--accent-cl), 1);
+}
+.btn-dark {
+  font-size: 18px;
+  color: rgba(var(--primary-cl), 1);
+}
+.btn-dark:hover,
+.btn-dark:focus {
+  color: rgba(var(--light-cl), 1);
+  background: rgba(var(--accent-cl), 1);
 }
 /* #endregion */
 
@@ -35,7 +126,30 @@ a {
 .header-menu-item {
 }
 .header-menu-link {
+  font-weight: 500;
+}
+.header-menu-link:hover,
+.header-menu-link:focus {
+  color: rgba(var(--accent-cl), 1);
 }
 .header-list {
+}
+/* #endregion */
+/* #region Hero */
+.hero {
+  background: rgba(var(--primary-cl), 0.4);
+}
+.hero-list {
+}
+.hero-item {
+}
+.hero-btn {
+}
+.hero-link {
+  font-weight: 500;
+  letter-spacing: -0.03em;
+  color: rgba(var(--light-cl), 1);
+}
+.hero-link-icon {
 }
 /* #endregion */
