@@ -14,15 +14,6 @@
       href="./images/icons/logo.svg"
       type="image/svg+xml"
     />
-    <!-- Critical CSS -->
-    <!-- <style>
-      header {
-        background: lightblue;
-      }
-      a {
-        color: blueviolet;
-      }
-    </style> -->
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -41,147 +32,153 @@
   <body>
     <!-- #region Header -->
     <header class="header" id="home">
-      <nav class="header-menu">
-        <a class="header-logo logo" href="#">
-          <span class="logo-accent">SIMPLY</span> CHOCOLATE
-          <img
-            class="logo-img"
-            src="./images/icons/logo.svg"
-            alt="Cite logo"
-            width="24"
-            height="24"
-          />
-        </a>
-        <ul class="header-menu-list">
-          <li class="header-menu-item">
-            <a class="header-menu-link" href="#home">Home</a>
+      <div class="container">
+        <nav class="header-menu">
+          <a class="header-logo logo" href="#">
+            <span class="logo-accent">SIMPLY</span> CHOCOLATE
+            <img
+              class="logo-img"
+              src="./images/icons/logo.svg"
+              alt="Cite logo"
+              width="24"
+              height="24"
+            />
+          </a>
+          <ul class="header-menu-list">
+            <li class="header-menu-item">
+              <a class="header-menu-link" href="#home">Home</a>
+            </li>
+            <li class="header-menu-item">
+              <a class="header-menu-link" href="#made">How it’s made?</a>
+            </li>
+            <li class="header-menu-item">
+              <a class="header-menu-link" href="#reviews">Chocolate is loved</a>
+            </li>
+          </ul>
+        </nav>
+        <ul class="header-list socials">
+          <li class="socials-item">
+            <a
+              class="socials-link"
+              href="https://facebook.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Link to facebook.com"
+            >
+              <img
+                class="socials-icon"
+                src="./images/icons/icon-facebook.svg"
+                alt="Facebook icon"
+                width="24"
+                height="24"
+              />
+            </a>
           </li>
-          <li class="header-menu-item">
-            <a class="header-menu-link" href="#made">How it’s made?</a>
+          <li class="socials-item">
+            <a
+              class="socials-link"
+              href="https://instagram.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Link to instagram.com"
+            >
+              <img
+                class="socials-icon"
+                src="./images/icons/icon-instagram.svg"
+                alt="Instagram icon"
+                width="24"
+                height="24"
+              />
+            </a>
           </li>
-          <li class="header-menu-item">
-            <a class="header-menu-link" href="#reviews">Chocolate is loved</a>
+          <li class="socials-item">
+            <a
+              class="socials-link"
+              href="https://twitter.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Link to twitter.com"
+            >
+              <img
+                class="socials-icon"
+                src="./images/icons/icon-twitter.svg"
+                alt="Twitter icon"
+                width="24"
+                height="24"
+              />
+            </a>
           </li>
         </ul>
-      </nav>
-      <ul class="header-list socials">
-        <li class="socials-item">
-          <a
-            class="socials-link"
-            href="https://facebook.com"
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label="Link to facebook.com"
-          >
-            <img
-              class="socials-icon"
-              src="./images/icons/icon-facebook.svg"
-              alt="Facebook icon"
-              width="24"
-              height="24"
-            />
-          </a>
-        </li>
-        <li class="socials-item">
-          <a
-            class="socials-link"
-            href="https://instagram.com"
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label="Link to instagram.com"
-          >
-            <img
-              class="socials-icon"
-              src="./images/icons/icon-instagram.svg"
-              alt="Instagram icon"
-              width="24"
-              height="24"
-            />
-          </a>
-        </li>
-        <li class="socials-item">
-          <a
-            class="socials-link"
-            href="https://twitter.com"
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label="Link to twitter.com"
-          >
-            <img
-              class="socials-icon"
-              src="./images/icons/icon-twitter.svg"
-              alt="Twitter icon"
-              width="24"
-              height="24"
-            />
-          </a>
-        </li>
-      </ul>
+      </div>
     </header>
     <!-- #endregion Header -->
     <main>
       <!-- #region Hero -->
       <section class="hero">
-        <h1 class="main-title">
-          Treat yourself or a loved one toents for a moment of pure delight!
-        </h1>
-        <ul class="hero-list">
-          <li class="hero-item">
-            <button class="btn btn-accent hero-btn" type="button">
-              Buy now
-            </button>
-          </li>
-          <li class="hero-item">
-            <button class="btn btn-light hero-btn" type="button">
-              How it’s made
-            </button>
-          </li>
-        </ul>
-        <a class="hero-link" href="#">
-          scroll down
-          <img
-            class="hero-link-icon"
-            src="./images/icons/arrow-down.svg"
-            alt=""
-            width="22"
-            height="22"
-          />
-        </a>
+        <div class="container">
+          <h1 class="main-title">
+            Treat yourself or a loved one toents for a moment of pure delight!
+          </h1>
+          <ul class="hero-list">
+            <li class="hero-item">
+              <button class="btn btn-accent hero-btn" type="button">
+                Buy now
+              </button>
+            </li>
+            <li class="hero-item">
+              <button class="btn btn-light hero-btn" type="button">
+                How it’s made
+              </button>
+            </li>
+          </ul>
+          <a class="hero-link" href="#">
+            scroll down
+            <img
+              class="hero-link-icon"
+              src="./images/icons/arrow-down.svg"
+              alt=""
+              width="22"
+              height="22"
+            />
+          </a>
+        </div>
       </section>
       <!-- #endregion -->
       <!-- #region Benefits -->
       <section class="benefits">
-        <h2 class="visually-hidden">Simply Chocolate Benefits</h2>
-        <ul class="benefits-list">
-          <li class="benefits-item">
-            <h3 class="benefits-caption">Unsurpassed taste</h3>
-            <p class="benefits-desc">
-              Crafted with the finest quality cocoa beans and a dedication to
-              perfection, each bite is a decadent experience that simply cannot
-              be matched. Savor the richness and complexity of our Unsurpassed
-              Taste and discover a new level of chocolate bliss.
-            </p>
-          </li>
-          <li class="benefits-item">
-            <h3 class="benefits-caption">Affordable price</h3>
-            <p class="benefits-desc">
-              Indulge in high-quality chocolate without breaking the bank with
-              Simply Chocolate's selection of affordable treats. Enjoy
-              mouth-watering truffles and velvety chocolate bars without
-              sacrificing taste or quality. Browse our selection and indulge in
-              affordable luxury today.
-            </p>
-          </li>
-          <li class="benefits-item">
-            <h3 class="benefits-caption">Own production</h3>
-            <p class="benefits-desc">
-              We take pride in our own production process, ensuring that every
-              step is carefully crafted to perfection. From selecting the fients
-              to handcrafting each piece, our attention to detail is evident in
-              every bite.
-            </p>
-          </li>
-        </ul>
+        <div class="container">
+          <h2 class="visually-hidden">Simply Chocolate Benefits</h2>
+          <ul class="benefits-list">
+            <li class="benefits-item">
+              <h3 class="benefits-caption">Unsurpassed taste</h3>
+              <p class="benefits-desc">
+                Crafted with the finest quality cocoa beans and a dedication to
+                perfection, each bite is a decadent experience that simply
+                cannot be matched. Savor the richness and complexity of our
+                Unsurpassed Taste and discover a new level of chocolate bliss.
+              </p>
+            </li>
+            <li class="benefits-item">
+              <h3 class="benefits-caption">Affordable price</h3>
+              <p class="benefits-desc">
+                Indulge in high-quality chocolate without breaking the bank with
+                Simply Chocolate's selection of affordable treats. Enjoy
+                mouth-watering truffles and velvety chocolate bars without
+                sacrificing taste or quality. Browse our selection and indulge
+                in affordable luxury today.
+              </p>
+            </li>
+            <li class="benefits-item">
+              <h3 class="benefits-caption">Own production</h3>
+              <p class="benefits-desc">
+                We take pride in our own production process, ensuring that every
+                step is carefully crafted to perfection. From selecting the
+                fients to handcrafting each piece, our attention to detail is
+                evident in every bite.
+              </p>
+            </li>
+          </ul>
+        </div>
       </section>
       <!-- #endregion -->
       <!-- #region Ingridients -->
@@ -520,8 +517,8 @@
               class="socials-icon"
               src="./images/icons/icon-facebook.svg"
               alt="Facebook icon"
-              width="40"
-              height="40"
+              width="24"
+              height="24"
             />
           </a>
         </li>
@@ -536,8 +533,8 @@
               class="socials-icon"
               src="./images/icons/icon-instagram.svg"
               alt="Instagram icon"
-              width="40"
-              height="40"
+              width="24"
+              height="24"
             />
           </a>
         </li>
@@ -552,8 +549,8 @@
               class="socials-icon"
               src="./images/icons/icon-twitter.svg"
               alt="Twitter icon"
-              width="40"
-              height="40"
+              width="24"
+              height="24"
             />
           </a>
         </li>
