@@ -23,6 +23,18 @@ body {
   color: rgb(var(--primary-cl));
   background: rgb(var(--light-cl));
 }
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+}
+img {
+  display: block;
+}
 a {
   color: currentColor;
   text-decoration: none;
@@ -30,11 +42,14 @@ a {
 ul,
 ol {
   list-style-type: none;
+  margin: 0;
+  padding: 0;
 }
 address {
   font-style: normal;
 }
 button {
+  padding: 0;
   color: currentColor;
   cursor: pointer;
 }
@@ -52,6 +67,14 @@ button {
   clip-path: inset(100%);
   clip: rect(0 0 0 0);
   overflow: hidden;
+}
+.container {
+  width: 1168px;
+  padding: 0 16px;
+  margin: 0 auto;
+
+  outline: 2px solid red;
+  outline-offset: -2px;
 }
 .main-title {
   font-weight: 500;
