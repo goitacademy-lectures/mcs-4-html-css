@@ -1,7 +1,7 @@
 /* #region */
 .wrapper {
   width: 800px;
-  min-height: 600px;
+  /* min-height: 600px; */
   padding: 20px;
   margin: 0 auto;
   margin-top: 60px;
@@ -28,12 +28,65 @@
 }
 /* #endregion */
 
+.btn {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+  min-width: 300px;
+  min-height: 40px;
+}
+.icon {
+  font-size: 32px;
+}
 /*=====================================*\
   FLEX BOX
 \*=====================================*/
+:root {
+  --indent-col: 40px;
+  --indent-row: var(--indent-col);
+  --items: 4;
+}
 .wrapper {
+  width: 800px;
+  padding: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  row-gap: var(--indent-row);
+  column-gap: var(--indent-col);
+
+  /* justify-content: space-between; */
+  /* align-items: center; */
   /* Default properties */
+  /* flex-direction: row; */
+  /* justify-content: flex-start; */
+  /* align-items: stretch; */
+  /* flex-wrap: nowrap; */
+  /* align-content: stretch; */
 }
 .item {
+  /* width: calc((100% - 40px * 3) / 4); */
+  width: calc((100% - var(--indent-col) * (var(--items) - 1)) / var(--items));
+
+  /* width: 170px;
+  max-width: 140px;
+  min-width: 110px;
+  flex-basis: 120px; */
+
   /* Default properties */
+  flex-basis: auto;
+  flex-shrink: 1;
+  flex-grow: 0;
+}
+
+.clients {
+  background-color: darkmagenta;
+  --items: 5;
+  --indent-col: 20px;
+  --indent-row: 80px;
+}
+.reviews {
+  background-color: tomato;
+  --items: 3;
+  --indent-row: 60px;
 }

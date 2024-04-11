@@ -77,6 +77,8 @@ button {
   outline-offset: -2px;
 }
 .main-title {
+  max-width: 484px;
+  margin-bottom: 32px;
   font-weight: 500;
   font-size: 28px;
   line-height: 1.21;
@@ -99,10 +101,15 @@ button {
   color: rgb(var(--accent-cl));
 }
 .btn {
+  min-width: 144px;
+  min-height: 45px;
+  padding: 14px 40px;
   font-weight: 600;
   line-height: 1.21;
   color: rgb(var(--white-cl));
   background: transparent;
+  border: 1px solid transparent;
+  border-radius: 100px;
 }
 .btn-accent {
   background: rgb(var(--accent-cl));
@@ -114,14 +121,17 @@ button {
 }
 .btn-light {
   color: rgb(var(--white-cl));
+  border-color: rgba(var(--light-cl), 1);
 }
 .btn-light:hover,
 .btn-light:focus {
   color: rgb(var(--accent-cl));
+  border-color: rgba(var(--accent-cl), 1);
 }
 .btn-dark {
   font-size: 18px;
   color: currentColor;
+  border-color: rgba(var(--accent-cl), 1);
 }
 .btn-dark:hover,
 .btn-dark:focus {
@@ -144,14 +154,25 @@ button {
 /* #endregion Logo */
 /* #region Socials */
 .socials {
+  display: flex;
+  gap: 14px;
 }
 .socials-dark {
 }
 .socials-light {
 }
 .socials-item {
+  width: 40px;
+  height: 40px;
 }
 .socials-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  border: 1px solid rgba(17, 17, 17, 0.1);
 }
 .socials-icon {
 }
@@ -159,17 +180,31 @@ button {
 /* #region Header */
 .header {
 }
-.header-nav {
+.header .container {
+  display: flex;
+  align-items: center;
 }
 .header-logo {
+  display: flex;
+  align-items: center;
+  gap: 4px;
 }
 .header-menu {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-grow: 1;
+  margin-right: 90px;
 }
 .header-menu-list {
+  display: flex;
+  gap: 24px;
 }
 .header-menu-item {
 }
 .header-menu-link {
+  display: block;
+  padding: 32px 0;
   font-weight: 500;
   line-height: 1.14;
 }
@@ -180,15 +215,30 @@ button {
 /* #endregion Header */
 /* #region Hero */
 .hero {
+}
+.hero .container {
+  padding: 40px;
+  padding-top: 381px;
   background: rgba(var(--primary-cl), 0.4);
+  border-radius: 30px;
+}
+.hero-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 .hero-list {
+  display: inline-flex;
+  gap: 14px;
 }
 .hero-item {
 }
 .hero-btn {
 }
 .hero-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 14px;
   font-weight: 500;
   font-size: 14px;
   letter-spacing: -0.03em;
