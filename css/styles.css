@@ -12,6 +12,9 @@
   --white-cl: 255, 255, 255;
   --beige-cl: 252, 241, 224;
   /* Others */
+  --indent-col: 32px;
+  --indent-row: var(--indent-col);
+  --items: 4;
 }
 /* #endregion Variables */
 /* #region Base */
@@ -34,6 +37,8 @@ p {
 }
 img {
   display: block;
+  max-width: 100%;
+  height: auto;
 }
 a {
   color: currentColor;
@@ -68,13 +73,20 @@ button {
   clip: rect(0 0 0 0);
   overflow: hidden;
 }
+.ingridients,
+.made,
+.products,
+.bestsellers,
+.reviews {
+  padding: 60px 0;
+}
 .container {
   width: 1168px;
   padding: 0 16px;
   margin: 0 auto;
 
-  outline: 2px solid red;
-  outline-offset: -2px;
+  /* outline: 2px solid red;
+  outline-offset: -2px; */
 }
 .main-title {
   max-width: 484px;
@@ -90,6 +102,9 @@ button {
 .products-title,
 .bestsellers-title,
 .reviews-title {
+  max-width: 412px;
+  margin: 0 auto 50px;
+  /* margin-bottom: 50px; */
   font-weight: 600;
   font-size: 24px;
   line-height: 1.17;
@@ -138,6 +153,18 @@ button {
   color: rgb(var(--white-cl));
   background: rgb(var(--accent-cl));
 }
+/* Card set */
+.card-set {
+  display: flex;
+  flex-wrap: wrap;
+  row-gap: var(--indent-row, 32px);
+  column-gap: var(--indent-col, 32px);
+}
+.card-set-item {
+  flex-basis: calc(
+    (100% - var(--indent-col, 32px) * (var(--items, 4) - 1)) / var(--items, 4)
+  );
+}
 /* #endregion Common */
 /* #region Logo */
 .logo {
@@ -172,7 +199,7 @@ button {
   width: 100%;
   height: 100%;
   border-radius: 10px;
-  border: 1px solid rgba(17, 17, 17, 0.1);
+  border: 1px solid rgba(var(--dark-cl), 0.1);
 }
 .socials-icon {
 }
@@ -215,8 +242,10 @@ button {
 /* #endregion Header */
 /* #region Hero */
 .hero {
+  margin-bottom: 80px;
 }
 .hero .container {
+  max-width: 1136px;
   padding: 40px;
   padding-top: 381px;
   background: rgba(var(--primary-cl), 0.4);
@@ -253,13 +282,19 @@ button {
 /* #endregion Hero */
 /* #region Benefits */
 .benefits {
+  padding: 50px 0;
   background: rgb(var(--dark-cl));
 }
 .benefits-list {
+  display: flex;
+  justify-content: center;
+  gap: 88px;
 }
 .benefits-item {
+  flex-basis: 308px;
 }
 .benefits-caption {
+  margin-bottom: 18px;
   font-weight: 600;
   font-size: 18px;
   line-height: 1.22;
@@ -271,19 +306,51 @@ button {
 /* #endregion Benefits */
 /* #region Ingridients */
 .ingridients {
+  padding-top: 120px;
 }
 .ingridients-title {
 }
 .ingridients-list {
 }
 .ingridients-item {
+  padding: 28px 23px;
+  border: 1px solid transparent;
+  border-radius: 15px;
 }
+/* .ingridients-item:first-child {
+  background-color: rgb(var(--accent-cl));
+}
+.ingridients-item:last-child {
+  background-color: rgb(var(--accent-cl));
+} */
+/* a * n + b */
+.ingridients-item:nth-child(2n) {
+  border-color: rgb(var(--accent-cl));
+  background-color: rgb(var(--white-cl));
+}
+.ingridients-item:nth-child(4n + 1) {
+  background-color: rgb(var(--accent-cl));
+}
+.ingridients-item:nth-child(4n + 3) {
+  background-color: rgb(var(--dark-cl));
+}
+/* .ingridients-item:nth-child(odd) {
+  border-color: rgb(var(--accent-cl));
+  background-color: rgb(var(--white-cl));
+} */
+
 .ingridients-ill {
 }
 .ingridients-desc {
+  margin-top: 36px;
   font-weight: 600;
+  font-size: 14px;
   text-transform: uppercase;
   color: rgb(var(--primary-cl));
+}
+/* .ingridients-item:nth-child(odd) > .ingridients-desc */
+.ingridients-item:nth-child(2n + 1) > .ingridients-desc {
+  color: rgb(var(--white-cl));
 }
 /* #endregion Ingridients */
 /* #region Made */
@@ -291,16 +358,39 @@ button {
 }
 .made-title {
 }
+.made-warpper {
+  display: flex;
+  gap: 20px;
+}
+.made-wrapper-left {
+  border-radius: 15px;
+  overflow: hidden;
+}
 .made-img {
 }
+.made-wrapper-right {
+  flex-basis: 516px;
+  padding: 32px;
+  border-radius: 15px;
+  background: rgb(var(--white-cl));
+}
 .made-caption {
+  max-width: 350px;
+  margin-bottom: 28px;
   font-weight: 600;
   font-size: 18px;
   line-height: 1.33;
 }
 .made-list {
 }
-.made-item {
+/* .made-item {
+  margin-bottom: 24px;
+}
+.made-item:last-child {
+  margin-bottom: 0;
+} */
+.made-item:not(:last-child) {
+  margin-bottom: 24px;
 }
 /* #endregion Made */
 /* #region Products */
@@ -309,26 +399,39 @@ button {
 .products-title {
 }
 .products-list {
+  --indent-col: 18px;
+  --indent-row: 24px;
 }
 .products-item {
-  background: rgb(var(--light-cl));
+  padding: 32px 20px;
+  background: rgb(var(--white-cl));
+  border-radius: 15px;
+  border: 1px solid rgba(var(--dark-cl), 0.1);
+  text-align: center;
 }
 .products-ill {
 }
 .products-name {
+  margin-block: 8px 2px;
   font-weight: 600;
   font-size: 18px;
   line-height: 1.33;
   text-transform: uppercase;
 }
 .products-type {
+  margin-bottom: 18px;
   font-size: 12px;
   line-height: 1.17;
   color: rgba(var(--primary-cl), 0.7);
 }
 .products-price {
+  min-width: 94px;
+  min-height: 33px;
+  padding: 8px 20px;
   font-weight: 600;
   background: rgb(var(--light-cl));
+  border-radius: 100px;
+  border: 1px solid rgba(var(--dark-cl), 0.1);
 }
 /* #endregion Products */
 /* #region Bestsellers */
@@ -336,33 +439,55 @@ button {
 }
 .bestsellers-title {
 }
-.bastsellers-list {
+.bestsellers-list {
+  --indent-col: 16px;
+  --items: 3;
 }
-.bastsellers-item {
+.bestsellers-item {
+}
+.bestsellers-img {
+  border-radius: 15px 15px 0 0;
+}
+.bestsellers-wrapper {
+  padding: 28px;
+  border: 1px solid rgba(17, 17, 17, 0.1);
+  border-top: none;
+  border-radius: 0px 0px 15px 15px;
   background: rgb(var(--white-cl));
 }
-.bastsellers-img {
-}
-.bastsellers-desc {
+.bestsellers-desc {
   font-weight: 600;
   font-size: 18px;
   line-height: 1.33;
   text-transform: uppercase;
+  text-align: center;
 }
 /* #endregion Bestsellers */
 /* #region Reviews */
 .reviews {
+  padding-bottom: 120px;
 }
 .reviews-title {
 }
 .reviews-list {
+  --indent-col: 28px;
+  --items: 3;
+  margin-bottom: 50px;
 }
 .reviews-item {
+  padding: 24px;
+  padding-top: 56px;
   background: rgb(var(--white-cl));
+  border-radius: 15px;
+  border: 1px solid rgba(var(--dark-cl), 0.1);
+  background: rgb(var(--white-cl));
+  box-shadow: 0px 10px 100px 0px rgba(var(--dark-cl), 0.1);
 }
 .reviews-avatar {
+  margin: 0 auto;
 }
 .reviews-author {
+  margin-bottom: 24px;
   font-weight: 600;
   font-size: 18px;
   line-height: 1.33;
@@ -372,18 +497,31 @@ button {
   text-align: center;
   color: rgba(var(--primary-cl), 0.7);
 }
+.reviews-btn {
+  display: block;
+  margin: 0 auto;
+}
 /* #endregion Reviews */
 /* #region Footer */
 .footer {
+  padding: 50px 0;
   background: rgb(var(--dark-cl));
 }
+.footer-top {
+  display: flex;
+  gap: 50px;
+  padding-bottom: 50px;
+}
 .footer-slogan {
+  max-width: 300px;
+  margin-right: auto;
   font-weight: 500;
   font-size: 28px;
   line-height: 1.21;
   color: rgb(var(--white-cl));
 }
 .footer-caption {
+  margin-bottom: 14px;
   font-weight: 500;
   color: rgb(var(--white-cl));
 }
@@ -395,7 +533,8 @@ button {
 }
 .address-list {
 }
-.address-item {
+.address-item:not(:last-child) {
+  margin-bottom: 4px;
 }
 .address-link {
   text-align: center;
@@ -405,11 +544,18 @@ button {
 .address-link:focus {
   color: rgb(var(--accent-cl));
 }
+.footer-bottom {
+  padding-top: 24px;
+}
 .footer-nav {
+  display: flex;
+  gap: 24px;
 }
 .footer-nav-item {
 }
 .footer-nav-link {
+  display: block;
+  padding: 18px 0;
   font-weight: 500;
   line-height: 1.14;
   color: rgb(var(--white-cl));
