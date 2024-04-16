@@ -218,7 +218,6 @@ button {
 /* #endregion Socials */
 /* #region Header */
 .header {
-  /* background-color: #fff; */
 }
 .header .container {
   display: flex;
@@ -419,7 +418,6 @@ button {
 /* #endregion Ingridients */
 /* #region Made */
 .made {
-  /* background-color: #fff; */
 }
 .made-title {
 }
