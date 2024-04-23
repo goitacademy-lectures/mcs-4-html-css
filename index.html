@@ -104,19 +104,27 @@
       <!-- #region Hero -->
       <section class="hero">
         <div class="container">
-          <h1 class="main-title">
+          <h1 class="main-title" style="--direction: -1">
             Treat yourself or a loved one to our&nbsp;finest ingredients for a
             moment of pure delight!
           </h1>
           <div class="hero-wrapper">
             <ul class="hero-list">
               <li class="hero-item">
-                <button class="btn btn-accent hero-btn" type="button">
+                <button
+                  class="btn btn-accent hero-btn"
+                  type="button"
+                  style="--delay: 1; --direction: 1"
+                >
                   Buy now
                 </button>
               </li>
               <li class="hero-item">
-                <button class="btn btn-light hero-btn" type="button">
+                <button
+                  class="btn btn-light hero-btn"
+                  type="button"
+                  style="--delay: 1.25; --direction: 1"
+                >
                   How it’s made
                 </button>
               </li>
@@ -661,8 +669,77 @@
             <use href="./images/sprite.svg#close"></use>
           </svg>
         </button>
+        <p class="modal-cta">LEAVE A REVIEW ABOUT OUR CHOCOLATE</p>
+        <form class="modal-form form" name="reviews" autocomplete="off">
+          <div class="form-wrapper">
+            <label class="form-label" for="user_name">User name</label>
+            <div class="form-field">
+              <input
+                class="form-input"
+                type="text"
+                name="user_name"
+                id="user_name"
+              />
+              <svg
+                class="form-icon"
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+              >
+                <path
+                  d="M20 21V19C20 17.9391 19.5786 16.9217 18.8284 16.1716C18.0783 15.4214 17.0609 15 16 15H8C6.93913 15 5.92172 15.4214 5.17157 16.1716C4.42143 16.9217 4 17.9391 4 19V21"
+                  stroke="black"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+                <path
+                  d="M12 11C14.2091 11 16 9.20914 16 7C16 4.79086 14.2091 3 12 3C9.79086 3 8 4.79086 8 7C8 9.20914 9.79086 11 12 11Z"
+                  stroke="black"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </div>
+          </div>
+
+          <label for="user_email">User email</label>
+          <input type="email" name="user_email" id="user_email" />
+
+          <label>
+            <span>User phone</span>
+            <input
+              type="tel"
+              name="user_phone"
+              placeholder="+38 (011) 111-111-11"
+            />
+          </label>
+
+          <label for="">Comment</label>
+          <textarea name="user_msg" rows="5"></textarea>
+
+          <label for="">
+            <input type="checkbox" name="" id="" />
+            <span
+              >I accept the terms and conditions of the
+              <a href="">Privacy Policy</a></span
+            >
+          </label>
+
+          <button type="submit">Send</button>
+        </form>
       </div>
     </div>
     <script src="./js/modal.js"></script>
+    <!-- <script>
+      const rangeEl = document.querySelector("input[type='range']");
+      rangeEl.addEventListener('input', event => {
+        value.textContent = event.target.value;
+      });
+    </script> -->
+    <!-- <script src="./js/form.js"></script> -->
   </body>
 </html>
