@@ -56,7 +56,7 @@
             </li>
           </ul>
         </nav>
-        <ul class="header-list socials">
+        <ul class="header-list socials socials-dark">
           <li class="socials-item">
             <a
               class="socials-link"
@@ -129,8 +129,8 @@
                 </button>
               </li>
             </ul>
-            <a class="hero-link" href="#">
-              scroll down
+            <a class="hero-link" href="#benefits">
+              <span class="hero-link-text">scroll down</span>
               <div class="hero-link-wrapper">
                 <svg class="hero-link-icon" width="22" height="22">
                   <use href="./images/sprite.svg#arrow-down"></use>
@@ -142,7 +142,7 @@
       </section>
       <!-- #endregion -->
       <!-- #region Benefits -->
-      <section class="benefits">
+      <section class="benefits" id="benefits">
         <div class="container">
           <h2 class="visually-hidden">Simply Chocolate Benefits</h2>
           <ul class="benefits-list">
@@ -578,21 +578,18 @@
           </p>
           <div class="footer-wrapper">
             <p class="footer-caption">Social networks</p>
-            <ul class="socials footer-socials">
+            <ul class="footer-list socials socials-light">
               <li class="socials-item">
                 <a
                   class="socials-link"
-                  href=""
+                  href="https://facebook.com"
                   target="_blank"
                   rel="noopener noreferrer"
+                  aria-label="Link to facebook.com"
                 >
-                  <img
-                    class="socials-icon"
-                    src="./images/icons/icon-facebook.svg"
-                    alt="Facebook icon"
-                    width="24"
-                    height="24"
-                  />
+                  <svg class="socials-icon" width="24" height="24">
+                    <use href="./images/sprite.svg#facebook"></use>
+                  </svg>
                 </a>
               </li>
               <li class="socials-item">
@@ -601,30 +598,24 @@
                   href="https://instagram.com"
                   target="_blank"
                   rel="noopener noreferrer"
+                  aria-label="Link to instagram.com"
                 >
-                  <img
-                    class="socials-icon"
-                    src="./images/icons/icon-instagram.svg"
-                    alt="Instagram icon"
-                    width="24"
-                    height="24"
-                  />
+                  <svg class="socials-icon" width="24" height="24">
+                    <use href="./images/sprite.svg#instagram"></use>
+                  </svg>
                 </a>
               </li>
               <li class="socials-item">
                 <a
                   class="socials-link"
-                  href=""
+                  href="https://twitter.com"
                   target="_blank"
                   rel="noopener noreferrer"
+                  aria-label="Link to twitter.com"
                 >
-                  <img
-                    class="socials-icon"
-                    src="./images/icons/icon-twitter.svg"
-                    alt="Twitter icon"
-                    width="24"
-                    height="24"
-                  />
+                  <svg class="socials-icon" width="24" height="24">
+                    <use href="./images/sprite.svg#twitter"></use>
+                  </svg>
                 </a>
               </li>
             </ul>
@@ -657,12 +648,25 @@
               <a class="footer-nav-link" href="#reviews">Chocolate is loved</a>
             </li>
           </ul>
+          <form class="footer-form" name="subscription">
+            <label class="footer-form-field">
+              <span class="footer-form-label">Email</span>
+              <input
+                class="footer-form-input"
+                type="email"
+                name=""
+                placeholder="Enter your email"
+              />
+            </label>
+            <button class="btn btn-accent" type="submit">Subscribe</button>
+          </form>
         </div>
       </div>
     </footer>
     <!-- #endregion -->
 
-    <div class="backdrop" data-modal>
+    <!-- #region Modal window -->
+    <div class="backdrop is-hidden" data-modal>
       <div class="modal">
         <button class="modal-btn" type="button" data-modal-close>
           <svg class="modal-btn-icon" width="28" height="28">
@@ -670,76 +674,83 @@
           </svg>
         </button>
         <p class="modal-cta">LEAVE A REVIEW ABOUT OUR CHOCOLATE</p>
-        <form class="modal-form form" name="reviews" autocomplete="off">
-          <div class="form-wrapper">
-            <label class="form-label" for="user_name">User name</label>
-            <div class="form-field">
+        <form class="modal-form review-form" name="review">
+          <div class="review-form-wrapper">
+            <label class="review-form-label" for="user_name">Name</label>
+            <div class="review-form-field">
               <input
-                class="form-input"
+                class="review-form-input"
                 type="text"
                 name="user_name"
                 id="user_name"
               />
-              <svg
-                class="form-icon"
-                xmlns="http://www.w3.org/2000/svg"
-                width="24"
-                height="24"
-                viewBox="0 0 24 24"
-                fill="none"
-              >
-                <path
-                  d="M20 21V19C20 17.9391 19.5786 16.9217 18.8284 16.1716C18.0783 15.4214 17.0609 15 16 15H8C6.93913 15 5.92172 15.4214 5.17157 16.1716C4.42143 16.9217 4 17.9391 4 19V21"
-                  stroke="black"
-                  stroke-width="2"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                />
-                <path
-                  d="M12 11C14.2091 11 16 9.20914 16 7C16 4.79086 14.2091 3 12 3C9.79086 3 8 4.79086 8 7C8 9.20914 9.79086 11 12 11Z"
-                  stroke="black"
-                  stroke-width="2"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                />
+              <svg class="review-form-icon" width="24" height="24">
+                <use href="./images/sprite.svg#user"></use>
+              </svg>
+            </div>
+          </div>
+          <div class="review-form-wrapper">
+            <label class="review-form-label" for="user_email">Email</label>
+            <div class="review-form-field">
+              <input
+                class="review-form-input"
+                type="email"
+                name="user_email"
+                id="user_email"
+              />
+              <svg class="review-form-icon" width="24" height="24">
+                <use href="./images/sprite.svg#email"></use>
+              </svg>
+            </div>
+          </div>
+          <div class="review-form-wrapper">
+            <label class="review-form-label" for="user_phone"
+              >Phone number</label
+            >
+            <div class="review-form-field">
+              <input
+                class="review-form-input"
+                type="tel"
+                name="user_phone"
+                id="user_phone"
+              />
+              <svg class="review-form-icon" width="24" height="24">
+                <use href="./images/sprite.svg#phone"></use>
               </svg>
             </div>
           </div>
 
-          <label for="user_email">User email</label>
-          <input type="email" name="user_email" id="user_email" />
+          <div class="review-form-wrapper">
+            <label class="review-form-label" for="user_msg">Comment</label>
+            <textarea
+              class="review-form-message"
+              name="user_msg"
+              id="user_msg"
+              rows="4"
+              placeholder="Enter text"
+            ></textarea>
+          </div>
 
-          <label>
-            <span>User phone</span>
-            <input
-              type="tel"
-              name="user_phone"
-              placeholder="+38 (011) 111-111-11"
-            />
+          <label class="review-form-agreement">
+            <input type="checkbox" name="user_agreement" value="false" />
+            <span class="review-form-checkbox">
+              <svg class="review-form-checkbox-icon" width="10" height="8">
+                <use href="./images/sprite.svg#check-mark"></use>
+              </svg>
+            </span>
+            <span class="review-form-agreement-desc">
+              I accept the terms and conditions of the
+              <a class="review-form-agreement-link" href="">Privacy Policy</a>
+            </span>
           </label>
 
-          <label for="">Comment</label>
-          <textarea name="user_msg" rows="5"></textarea>
-
-          <label for="">
-            <input type="checkbox" name="" id="" />
-            <span
-              >I accept the terms and conditions of the
-              <a href="">Privacy Policy</a></span
-            >
-          </label>
-
-          <button type="submit">Send</button>
+          <button class="btn btn-accent" type="submit">Send</button>
         </form>
       </div>
     </div>
+    <!-- #endregion -->
+
     <script src="./js/modal.js"></script>
-    <!-- <script>
-      const rangeEl = document.querySelector("input[type='range']");
-      rangeEl.addEventListener('input', event => {
-        value.textContent = event.target.value;
-      });
-    </script> -->
     <!-- <script src="./js/form.js"></script> -->
   </body>
 </html>
