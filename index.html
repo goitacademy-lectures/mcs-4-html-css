@@ -650,13 +650,13 @@
           </ul>
           <form class="footer-form" name="subscription">
             <label class="footer-form-field">
-              <span class="footer-form-label">Email</span>
               <input
                 class="footer-form-input"
                 type="email"
                 name=""
                 placeholder="Enter your email"
               />
+              <span class="footer-form-label">Email</span>
             </label>
             <button class="btn btn-accent" type="submit">Subscribe</button>
           </form>
@@ -673,8 +673,10 @@
             <use href="./images/sprite.svg#close"></use>
           </svg>
         </button>
-        <p class="modal-cta">LEAVE A REVIEW ABOUT OUR CHOCOLATE</p>
-        <form class="modal-form review-form" name="review">
+        <p class="modal-cta">
+          LEAVE A REVIEW ABOUT <span class="accent">OUR CHOCOLATE</span>
+        </p>
+        <form class="modal-form review-form" name="review" autocomplete="off">
           <div class="review-form-wrapper">
             <label class="review-form-label" for="user_name">Name</label>
             <div class="review-form-field">
@@ -683,10 +685,18 @@
                 type="text"
                 name="user_name"
                 id="user_name"
+                placeholder="&nbsp;"
+                minlength="3"
+                required
               />
               <svg class="review-form-icon" width="24" height="24">
                 <use href="./images/sprite.svg#user"></use>
               </svg>
+              <svg class="validation-status" width="20" height="20">
+                <use class="success" href="./images/sprite.svg#success"></use>
+                <use class="error" href="./images/sprite.svg#error"></use>
+              </svg>
+              <span class="error-text">Name must contain minimun 3 char</span>
             </div>
           </div>
           <div class="review-form-wrapper">
@@ -697,6 +707,9 @@
                 type="email"
                 name="user_email"
                 id="user_email"
+                required
+                pattern="[a-zA-Z\S]+@[a-zA-Z\S]+\.[a-z]{2,3}$"
+                title="Email must contain domen"
               />
               <svg class="review-form-icon" width="24" height="24">
                 <use href="./images/sprite.svg#email"></use>
@@ -704,15 +717,18 @@
             </div>
           </div>
           <div class="review-form-wrapper">
-            <label class="review-form-label" for="user_phone"
-              >Phone number</label
-            >
+            <label class="review-form-label" for="user_phone">
+              Phone number
+            </label>
             <div class="review-form-field">
               <input
                 class="review-form-input"
                 type="tel"
                 name="user_phone"
                 id="user_phone"
+                placeholder="+38(099)123-45-67"
+                minlength="17"
+                maxlength="17"
               />
               <svg class="review-form-icon" width="24" height="24">
                 <use href="./images/sprite.svg#phone"></use>
@@ -728,21 +744,50 @@
               id="user_msg"
               rows="4"
               placeholder="Enter text"
+              minlength="10"
+              required
             ></textarea>
           </div>
 
-          <label class="review-form-agreement">
-            <input type="checkbox" name="user_agreement" value="false" />
-            <span class="review-form-checkbox">
-              <svg class="review-form-checkbox-icon" width="10" height="8">
-                <use href="./images/sprite.svg#check-mark"></use>
-              </svg>
-            </span>
-            <span class="review-form-agreement-desc">
+          <div class="review-form-agreement">
+            <input
+              class="visually-hidden"
+              type="checkbox"
+              name="user_agreement"
+              id="user_agreement"
+              value="false"
+            />
+            <!-- <input
+              class="review-checkbox"
+              type="checkbox"
+              name="user_agreement"
+              id="user_agreement"
+              value="false"
+            /> -->
+            <label class="review-form-agreement-desc" for="user_agreement">
+              <span class="review-form-checkbox">
+                <svg class="review-form-checkbox-icon" width="10" height="8">
+                  <use href="./images/sprite.svg#check-mark"></use>
+                </svg>
+              </span>
+              <!-- <svg class="review-icon" width="20" height="20">
+                <use class="normal" href="./images/sprite.svg#checkmark"></use>
+                <use
+                  class="active"
+                  href="./images/sprite.svg#checkmark-active"
+                ></use>
+              </svg> -->
               I accept the terms and conditions of the
-              <a class="review-form-agreement-link" href="">Privacy Policy</a>
-            </span>
-          </label>
+              <a
+                class="review-form-agreement-link"
+                href="#"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Privacy Policy
+              </a>
+            </label>
+          </div>
 
           <button class="btn btn-accent" type="submit">Send</button>
         </form>
