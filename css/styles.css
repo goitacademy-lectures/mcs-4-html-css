@@ -95,6 +95,10 @@ body {
   letter-spacing: -0.02em;
   color: rgb(var(--primary-cl));
   background: rgb(var(--light-cl));
+  transition: 300ms;
+}
+body:has(.toggler-control:checked) {
+  filter: invert(1);
 }
 h1,
 h2,
@@ -1134,3 +1138,39 @@ input[type='checkbox']:checked
 .review-form-input:not(:placeholder-shown):required:invalid ~ .error-text {
   opacity: 1;
 }
+/* #region Toggler */
+.toggler-wrapper {
+  position: relative;
+  width: 40px;
+  height: 20px;
+  margin-left: 20px;
+  border-radius: 16px;
+  border: 1px solid rgb(var(--primary-cl));
+  cursor: pointer;
+  transition: border-color 300ms ease-in-out;
+}
+.toggler-wrapper:has(.toggler-control:checked) {
+  border-color: rgb(var(--accent-cl));
+}
+.toggler-wrapper:has(.toggler-control:focus-visible) {
+  box-shadow: 0 0 0 4px rgba(var(--accent-cl), 0.25);
+}
+.toggler-icon {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 2px;
+  width: 16px;
+  height: 16px;
+  background-color: rgb(var(--primary-cl));
+  border-radius: 50%;
+  transform: translateX(0) translateY(-50%);
+  transition: transform 300ms ease-in-out;
+}
+.toggler-wrapper:has(.toggler-control:checked) > .toggler-icon {
+  background-color: rgb(var(--accent-cl));
+  transform: translateX(calc(100% + 3px)) translateY(-50%);
+}
+.toggler-control {
+}
+/* #endregion */
