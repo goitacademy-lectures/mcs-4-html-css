@@ -32,6 +32,13 @@
     />
     <!-- Custom styles -->
     <link rel="stylesheet" href="./css/styles.css" />
+    <!-- <link rel="stylesheet" href="./css/mobile.css" media="(max-width: 767px)" />
+    <link rel="stylesheet" href="./css/tablet.css" media="(min-width: 768px)" />
+    <link
+      rel="stylesheet"
+      href="./css/desktop.css"
+      media="(min-width: 1200px)"
+    /> -->
   </head>
   <body>
     <!-- #region Header -->
@@ -97,6 +104,16 @@
             </a>
           </li>
         </ul>
+        <label class="toggler-wrapper">
+          <span class="visually-hidden">Theme switcher</span>
+          <span class="toggler-icon"></span>
+          <input
+            class="toggler-control visually-hidden"
+            type="checkbox"
+            name="theme-switcher"
+            value="light-theme"
+          />
+        </label>
       </div>
     </header>
     <!-- #endregion Header -->
@@ -194,7 +211,7 @@
       </section>
       <!-- #endregion -->
       <!-- #region Ingridients -->
-      <section class="ingridients">
+      <section class="ingridients hide">
         <div class="container">
           <h2 class="section-title ingridients-title">
             It all adds up to one exceptional
@@ -297,7 +314,7 @@
       </section>
       <!-- #endregion  -->
       <!-- #region Made -->
-      <section class="made" id="made">
+      <section class="made hide" id="made">
         <div class="container">
           <h2 class="section-title made-title">
             How it’s <span class="accent">made</span>?
@@ -344,7 +361,7 @@
       </section>
       <!-- #endregion  -->
       <!-- #region Products -->
-      <section class="products">
+      <section class="products hide">
         <div class="container">
           <h2 class="products-title section-title">
             Our <span class="accent">products</span>
@@ -451,7 +468,7 @@
       </section>
       <!-- #endregion -->
       <!-- #region Bestsellers -->
-      <section class="bestsellers">
+      <section class="bestsellers hide">
         <div class="container">
           <h2 class="bestsellers-title section-title">
             <span class="accent">Top</span> sellers
@@ -507,7 +524,7 @@
       </section>
       <!-- #endregion -->
       <!-- #region Reviews -->
-      <section class="reviews" id="reviews">
+      <section class="reviews hide" id="reviews">
         <div class="container">
           <h2 class="reviews-title section-title">
             <span class="accent">Chocolate</span> is loved
@@ -570,7 +587,7 @@
       <!-- #endregion -->
     </main>
     <!-- #region Footer -->
-    <footer class="footer">
+    <footer class="footer hide">
       <div class="container">
         <div class="footer-top">
           <p class="footer-slogan">
@@ -726,9 +743,8 @@
                 type="tel"
                 name="user_phone"
                 id="user_phone"
-                placeholder="+38(099)123-45-67"
-                minlength="17"
-                maxlength="17"
+                minlength="18"
+                maxlength="18"
               />
               <svg class="review-form-icon" width="24" height="24">
                 <use href="./images/sprite.svg#phone"></use>
@@ -795,6 +811,18 @@
     </div>
     <!-- #endregion -->
 
+    <script
+      src="https://code.jquery.com/jquery-3.7.1.min.js"
+      integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/inputmask/3.3.6/jquery.inputmask.bundle.min.js"
+      integrity="sha512-BWnGNxAIoEQRtUdBhT2/PmB9fksPYnJBIMZhSDo/htBV+BDAL8DK6FsCIDyRc3aK37vF3qVbUTswogs4LabN0g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script src="./js/phone-mask.js"></script>
     <script src="./js/modal.js"></script>
     <!-- <script src="./js/form.js"></script> -->
   </body>
