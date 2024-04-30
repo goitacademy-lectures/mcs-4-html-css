@@ -12,4 +12,10 @@ HTML-CSS course for Master of Science in Computer Science
 - Адаптивна і респонсивна верстка
 - Підхід `mobile-first CSS`
 
-[🍫 Посилання на макет](https://www.figma.com/file/SHNrA7r9RBXLqDUVYZjL1g/Simply-Chocolate?type=design&node-id=0%3A1&mode=design&t=6aQS0hFd0tLCXP49-1)
+## План заняття (02.05.2024):
+
+- Поняття `ретіна` дисплей
+- Респонсивні контенті зображення
+- Респонсивні фонові зображення
+
+  [🍫 Посилання на макет](https://www.figma.com/file/SHNrA7r9RBXLqDUVYZjL1g/Simply-Chocolate?type=design&node-id=0%3A1&mode=design&t=6aQS0hFd0tLCXP49-1)
