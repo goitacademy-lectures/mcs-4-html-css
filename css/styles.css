@@ -1,3 +1,7 @@
+.hide {
+  display: none;
+}
+
 /* #region Variables */
 :root {
   scroll-behavior: smooth;
@@ -154,13 +158,28 @@ button {
 .reviews {
   padding: 60px 0;
 }
+/* Mobile styles -> base styles */
 .container {
-  width: 1168px;
-  padding: 0 16px;
+  min-width: 320px;
+  max-width: 375px;
+  padding: 0 20px;
   margin: 0 auto;
 
-  /* outline: 2px solid red;
-  outline-offset: -2px; */
+  outline: 2px solid red;
+  outline-offset: -2px;
+}
+/* Tablet styles */
+@media only screen and (min-width: 768px) {
+  .container {
+    max-width: 736px;
+    padding: 0 16px;
+  }
+}
+/* Desktop styles */
+@media only screen and (min-width: 1200px) {
+  .container {
+    max-width: 1168px;
+  }
 }
 .main-title {
   max-width: 484px;
@@ -429,13 +448,31 @@ button {
 /* #endregion Hero */
 /* #region Benefits */
 .benefits {
-  padding: 50px 0;
+  padding: 20px 0;
   background: rgb(var(--dark-cl));
+}
+@media only screen and (min-width: 768px) {
+  .benefits {
+    padding: 50px 0;
+  }
 }
 .benefits-list {
   display: flex;
-  justify-content: center;
-  gap: 88px;
+
+  flex-direction: column;
+  gap: 20px;
+}
+@media only screen and (min-width: 768px) {
+  .benefits-list {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 44px 88px;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  .benefits-list {
+    justify-content: center;
+  }
 }
 .benefits-item {
   position: relative;
@@ -450,6 +487,11 @@ button {
   width: 1px;
   height: 124px;
   background: rgba(255, 255, 255, 0.5);
+}
+@media only screen and (max-width: 1199px) {
+  .benefits-item:not(:last-child)::after {
+    display: none;
+  }
 }
 .benefits-wrapper {
   width: 62px;
@@ -1034,7 +1076,7 @@ input[type='checkbox']:checked
 }
 /* #endregion */
 
-/* Checkbox ver.2 */
+/* #region Checkbox ver.2 */
 .normal,
 .active {
   transition: var(--trns-slow);
@@ -1057,7 +1099,8 @@ input[type='checkbox']:checked
   > .active {
   opacity: 1;
 }
-/* Checkbox ver. 3 */
+/* #endregion Checkbox ver.2 */
+/* #region Checkbox ver.3 */
 .review-checkbox {
   position: relative;
   appearance: none;
@@ -1138,6 +1181,7 @@ input[type='checkbox']:checked
 .review-form-input:not(:placeholder-shown):required:invalid ~ .error-text {
   opacity: 1;
 }
+/* #endregion Checkbox ver.3 */
 /* #region Toggler */
 .toggler-wrapper {
   position: relative;

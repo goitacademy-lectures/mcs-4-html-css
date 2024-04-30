@@ -32,6 +32,13 @@
     />
     <!-- Custom styles -->
     <link rel="stylesheet" href="./css/styles.css" />
+    <!-- <link rel="stylesheet" href="./css/mobile.css" media="(max-width: 767px)" />
+    <link rel="stylesheet" href="./css/tablet.css" media="(min-width: 768px)" />
+    <link
+      rel="stylesheet"
+      href="./css/desktop.css"
+      media="(min-width: 1200px)"
+    /> -->
   </head>
   <body>
     <!-- #region Header -->
@@ -204,7 +211,7 @@
       </section>
       <!-- #endregion -->
       <!-- #region Ingridients -->
-      <section class="ingridients">
+      <section class="ingridients hide">
         <div class="container">
           <h2 class="section-title ingridients-title">
             It all adds up to one exceptional
@@ -307,7 +314,7 @@
       </section>
       <!-- #endregion  -->
       <!-- #region Made -->
-      <section class="made" id="made">
+      <section class="made hide" id="made">
         <div class="container">
           <h2 class="section-title made-title">
             How it’s <span class="accent">made</span>?
@@ -354,7 +361,7 @@
       </section>
       <!-- #endregion  -->
       <!-- #region Products -->
-      <section class="products">
+      <section class="products hide">
         <div class="container">
           <h2 class="products-title section-title">
             Our <span class="accent">products</span>
@@ -461,7 +468,7 @@
       </section>
       <!-- #endregion -->
       <!-- #region Bestsellers -->
-      <section class="bestsellers">
+      <section class="bestsellers hide">
         <div class="container">
           <h2 class="bestsellers-title section-title">
             <span class="accent">Top</span> sellers
@@ -517,7 +524,7 @@
       </section>
       <!-- #endregion -->
       <!-- #region Reviews -->
-      <section class="reviews" id="reviews">
+      <section class="reviews hide" id="reviews">
         <div class="container">
           <h2 class="reviews-title section-title">
             <span class="accent">Chocolate</span> is loved
@@ -580,7 +587,7 @@
       <!-- #endregion -->
     </main>
     <!-- #region Footer -->
-    <footer class="footer">
+    <footer class="footer hide">
       <div class="container">
         <div class="footer-top">
           <p class="footer-slogan">
@@ -676,7 +683,7 @@
     <!-- #endregion -->
 
     <!-- #region Modal window -->
-    <div class="backdrop" data-modal>
+    <div class="backdrop is-hidden" data-modal>
       <div class="modal">
         <button class="modal-btn" type="button" data-modal-close>
           <svg class="modal-btn-icon" width="28" height="28">
