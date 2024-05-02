@@ -32,13 +32,6 @@
     />
     <!-- Custom styles -->
     <link rel="stylesheet" href="./css/styles.css" />
-    <!-- <link rel="stylesheet" href="./css/mobile.css" media="(max-width: 767px)" />
-    <link rel="stylesheet" href="./css/tablet.css" media="(min-width: 768px)" />
-    <link
-      rel="stylesheet"
-      href="./css/desktop.css"
-      media="(min-width: 1200px)"
-    /> -->
   </head>
   <body>
     <!-- #region Header -->
@@ -51,6 +44,16 @@
               <use href="./images/sprite.svg#logo"></use>
             </svg>
           </a>
+          <button
+            class="menu-toggle js-open-menu"
+            aria-expanded="false"
+            aria-controls="mobile-menu"
+            aria-label="Open menu button"
+          >
+            <svg class="menu-toggle-icon" width="32" height="22">
+              <use href="./images/sprite.svg#burger-menu"></use>
+            </svg>
+          </button>
           <ul class="header-menu-list">
             <li class="header-menu-item">
               <a class="header-menu-link current" href="#home">Home </a>
@@ -104,7 +107,7 @@
             </a>
           </li>
         </ul>
-        <label class="toggler-wrapper">
+        <label class="toggler-wrapper hide">
           <span class="visually-hidden">Theme switcher</span>
           <span class="toggler-icon"></span>
           <input
@@ -211,7 +214,7 @@
       </section>
       <!-- #endregion -->
       <!-- #region Ingridients -->
-      <section class="ingridients hide">
+      <section class="ingridients">
         <div class="container">
           <h2 class="section-title ingridients-title">
             It all adds up to one exceptional
@@ -224,10 +227,15 @@
               </svg>
               <img
                 class="ingridients-ill"
+                srcset="
+                  ./images/ingridients/img-1.png    1x,
+                  ./images/ingridients/img-1@2x.png 2x
+                "
                 src="./images/ingridients/img-1.png"
                 alt=""
-                width="214"
-                height="160"
+                width="236"
+                height="176"
+                loading="lazy"
               />
               <h3 class="ingridients-desc">MILK CHOCOLATE</h3>
             </li>
@@ -237,10 +245,15 @@
               </svg>
               <img
                 class="ingridients-ill"
+                srcset="
+                  ./images/ingridients/img-2.png    1x,
+                  ./images/ingridients/img-2@2x.png 2x
+                "
                 src="./images/ingridients/img-2.png"
                 alt=""
-                width="214"
-                height="160"
+                width="236"
+                height="176"
+                loading="lazy"
               />
               <h3 class="ingridients-desc">MILK</h3>
             </li>
@@ -250,10 +263,15 @@
               </svg>
               <img
                 class="ingridients-ill"
+                srcset="
+                  ./images/ingridients/img-3.png    1x,
+                  ./images/ingridients/img-3@2x.png 2x
+                "
                 src="./images/ingridients/img-3.png"
                 alt=""
-                width="214"
-                height="160"
+                width="236"
+                height="176"
+                loading="lazy"
               />
               <h3 class="ingridients-desc">NUTS</h3>
             </li>
@@ -263,10 +281,15 @@
               </svg>
               <img
                 class="ingridients-ill"
+                srcset="
+                  ./images/ingridients/img-4.png    1x,
+                  ./images/ingridients/img-4@2x.png 2x
+                "
                 src="./images/ingridients/img-4.png"
                 alt=""
-                width="214"
-                height="160"
+                width="236"
+                height="176"
+                loading="lazy"
               />
               <h3 class="ingridients-desc">SEMI - SWEET CHOCOLATE</h3>
             </li>
@@ -276,10 +299,15 @@
               </svg>
               <img
                 class="ingridients-ill"
+                srcset="
+                  ./images/ingridients/img-5.png    1x,
+                  ./images/ingridients/img-5@2x.png 2x
+                "
                 src="./images/ingridients/img-5.png"
                 alt=""
-                width="214"
-                height="160"
+                width="236"
+                height="176"
+                loading="lazy"
               />
               <h3 class="ingridients-desc">CACAO</h3>
             </li>
@@ -289,10 +317,15 @@
               </svg>
               <img
                 class="ingridients-ill"
+                srcset="
+                  ./images/ingridients/img-6.png    1x,
+                  ./images/ingridients/img-6@2x.png 2x
+                "
                 src="./images/ingridients/img-6.png"
                 alt=""
-                width="214"
-                height="160"
+                width="236"
+                height="176"
+                loading="lazy"
               />
               <h3 class="ingridients-desc">RASPBERRY</h3>
             </li>
@@ -302,10 +335,15 @@
               </svg>
               <img
                 class="ingridients-ill"
+                srcset="
+                  ./images/ingridients/img-7.png    1x,
+                  ./images/ingridients/img-7@2x.png 2x
+                "
                 src="./images/ingridients/img-7.png"
                 alt=""
-                width="214"
-                height="160"
+                width="236"
+                height="176"
+                loading="lazy"
               />
               <h3 class="ingridients-desc">COCONUT OIL</h3>
             </li>
@@ -811,6 +849,96 @@
     </div>
     <!-- #endregion -->
 
+    <!-- #region Mobile menu-->
+    <div class="menu-container js-menu-container" id="mobile-menu">
+      <button class="menu-toggle js-close-menu" aria-label="Close menu button">
+        <svg class="menu-toggle-icon" width="28" height="28">
+          <use href="./images/sprite.svg#close"></use>
+        </svg>
+      </button>
+
+      <ul class="mobile-menu">
+        <li>
+          <a href="" class="link active">Studio</a>
+        </li>
+        <li>
+          <a href="" class="link">Portfolio</a>
+        </li>
+        <li>
+          <a href="" class="link">Contacts</a>
+        </li>
+      </ul>
+
+      <ul class="mobile-contacts">
+        <li>
+          <a class="link accent" href="tel:+110001111111"
+            >+11 (000) 111-11-11</a
+          >
+        </li>
+        <li>
+          <a class="link" href="mailto:info@devstudio.com"
+            >info@devstudio.com</a
+          >
+        </li>
+      </ul>
+
+      <ul class="mobile-socials socials socials-dark">
+        <li class="socials-item">
+          <a
+            class="socials-link"
+            href="https://facebook.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Link to facebook.com"
+          >
+            <svg class="socials-icon" width="24" height="24">
+              <use href="./images/sprite.svg#facebook"></use>
+            </svg>
+          </a>
+        </li>
+        <li class="socials-item">
+          <a
+            class="socials-link"
+            href="https://instagram.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Link to instagram.com"
+          >
+            <svg class="socials-icon" width="24" height="24">
+              <use href="./images/sprite.svg#instagram"></use>
+            </svg>
+          </a>
+        </li>
+        <li class="socials-item">
+          <a
+            class="socials-link"
+            href="https://twitter.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Link to twitter.com"
+          >
+            <svg class="socials-icon" width="24" height="24">
+              <use href="./images/sprite.svg#twitter"></use>
+            </svg>
+          </a>
+        </li>
+        <li class="socials-item">
+          <a
+            class="socials-link"
+            href="https://facebook.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Link to facebook.com"
+          >
+            <svg class="socials-icon" width="24" height="24">
+              <use href="./images/sprite.svg#facebook"></use>
+            </svg>
+          </a>
+        </li>
+      </ul>
+    </div>
+    <!-- #endregion -->
+
     <script
       src="https://code.jquery.com/jquery-3.7.1.min.js"
       integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
@@ -822,8 +950,16 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     ></script>
+    <script
+      defer
+      src="https://cdnjs.cloudflare.com/ajax/libs/body-scroll-lock/3.1.5/bodyScrollLock.min.js"
+      integrity="sha512-HowizSDbQl7UPEAsPnvJHlQsnBmU2YMrv7KkTBulTLEGz9chfBoWYyZJL+MUO6p/yBuuMO/8jI7O29YRZ2uBlA=="
+      crossorigin="anonymous"
+    ></script>
+    <script src="./js/mobile-menu.js"></script>
     <script src="./js/phone-mask.js"></script>
     <script src="./js/modal.js"></script>
+
     <!-- <script src="./js/form.js"></script> -->
   </body>
 </html>
